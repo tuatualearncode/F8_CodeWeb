@@ -1,0 +1,450 @@
+/* RESET CSS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+1. Vị trí 
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng ( kiểu chữ, hình vuông, hình tròn)
+*/
+#header{
+position :fixed;
+top : 0;
+left : 0;
+right : 0;
+height: 46.5px;
+background-color: black;
+}
+
+#nav {
+    display: inline-block; /* để cho chiều dài của nav bằng nội dung của nó */
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+#nav > li > a {  /* chỉ css cho các thẻ a là con trực tiếp của li - cấp1 */
+    color : #FFF; 
+    text-transform: uppercase;
+}
+#nav li a {
+    text-decoration: none ;
+    line-height: 46px;  /* chiều cao của dòng chữ, nguyên tắc là chữ luôn nằm giữa chiều cao của nó */
+    padding: 0 24px;
+    display: inline-block;
+}
+
+
+#nav > li:hover > a{
+    color: #000 ;
+    background-color: #ccc ;
+}
+#nav .subnav li:hover {
+    color: #000 ;
+    background-color: #ccc;
+    width: 100%;
+}
+
+#nav .subnav{
+    display : none;
+    position: absolute;
+    top : 100%;
+    left : 0;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3) ; /* bóng đỗ */
+}
+
+#nav li:hover .subnav{
+    display : block;
+}
+
+#nav .subnav a{
+    color: black;
+    padding : 0 12px;  
+}
+
+#nav .nav-caret-down{
+    color: #FFF;
+    font-size: 14px;
+}
+#nav li:hover .nav-caret-down{
+   color: black;
+}
+
+#header-search{
+    float : right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : #fff;
+    font-size: 20px;
+    height: 100%;
+    width: 62px;
+}
+
+#header-search:hover {
+    background-color: crimson;
+}
+
+
+/* Slider */
+
+#slider{
+   position : relative;
+   margin-top : 46px;
+   padding-top: 50%;  /* 50% kích thước theo tỷ lệ chiều ngàng của chính nó */
+   background-color: aquamarine;
+   background : url('https://www.w3schools.com/w3images/chicago.jpg') top center /cover no-repeat; /* mặc định đổ từ lớp padding */
+  
+}
+
+#slider .content{
+    position : absolute;
+    bottom : 48px;
+    color: #fff;
+    /* left : 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+    /* line-height: 40px; */
+
+}
+#slider .content-heading{
+    font-weight: 500;
+    font-size: 24px;
+    margin : 10px 0;
+}
+
+/* CONTENT */
+
+/* Use-for-all */
+#content .content-section{ 
+    padding: 64px 16px;
+    width: 800px;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+#content .content-section-heading{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+
+#content .content-section-sub-heading{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 0;
+    font-style: italic;
+    opacity : 0.6;
+}
+
+/* content - band */
+#content .band-content{
+   font-size: 15px;
+   text-align: justify; /* căn đều văn bản ra 2 bên */
+   line-height: 1.4;
+   margin : 15px 0;
+}
+
+#content .band-image{
+    padding : 32px 0 ;
+    box-sizing: border-box;
+    display: flex;
+}
+#content .band-image-child{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+#content .image-content{
+    margin-bottom: 15px;
+}
+#content .band-img{
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* content - tour date*/
+#tour-date{
+    background-color: black;
+}
+.content-section.tour-date{
+    background-color: black;
+    color : #fff;
+}
+#content .tour-date-list{
+    background-color: #fff;
+    color: black;
+    list-style: none;
+    
+}
+
+.tour-date-list .list-content{
+   padding : 11px 16px;
+   border-bottom: 1px solid #ddd;
+   color : #7575;
+}
+
+.tour-date-list  .list-content-des{
+    background-color: #ff4336 ;
+    color :#fff;
+    font-size: 16px;
+    margin-left: 16px;
+    padding : 4px 4px;
+}
+
+.tour-date-list  .list-content-des2{
+    display: inline-block;
+    float : right;
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+
+#content .tour-infor{
+    padding : 32px 0;
+    display: flex;
+    
+}
+
+.tour-infor .tour-infor-child{
+    width: calc(100%/3);
+    height: 388px;
+    background-color: #fff;
+    color: black;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    font-size : 15px;
+    font-family: sans-serif;
+}
+.tour-infor .tour-infor-child.child3 {
+    margin-right: 0;
+}
+
+.tour-infor-child .img-below{
+    padding : 0.15px 16px;
+}
+
+.tour-infor .child-img{
+   width: 100%;
+}
+
+.tour-infor .child-img:hover{
+    opacity : 0.8;
+ }
+
+.tour-infor-child .child-address{
+    margin : 15px 0;
+}
+
+.tour-infor-child .child-time {
+    margin: 15px 0;
+    opacity : 0.6;
+}
+
+.margin-padding .child-des{
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.tour-infor-child .child-buy-ticket{
+    margin: 15px 0;
+    background-color: black;
+    border: none;
+    padding : 8px 16px ;
+    color : #FFF;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.tour-infor-child .child-buy-ticket:hover{
+    background-color: #ccc;
+    color : black;
+}
+
+/* content - contact */
+.contact-des{
+    height: 222px;
+    width: 100%;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-infor{
+    list-style: none;
+    line-height: 1.6;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.logo-contact{
+    margin-right: 8px;
+}
+
+
+.contact-input-child{
+    height: 40px;
+    width: 183px;
+    border: 1px solid #ccc;
+    padding : 8px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.contact-input-child.child3{
+   margin-top: 10px;
+   width: 100%;
+}
+
+.contact-button{
+   
+    background-color: black;
+    border : none;
+    color : #fff;
+    margin : 16px 0;
+    height: 30px;
+    width: 65px;
+    font-size : 15px;
+    font-family: sans-serif;
+    float: right;
+}
+
+
+/*FOOTER*/
+
+.footer-child{
+    width: 100%;
+    padding : 64px 16px;
+    text-align: center;
+    line-height: 3.5;
+}
+
+.footer-child-logo .color{
+   font-size : 24px;
+   opacity: 0.6;
+}
+
+.footer-child-content{
+    opacity: 0.6;
+}
+.footer-child-content >a{
+    color: black;
+    margin-left: 4px;
+}
+/* MODAL-BUYTICKET */
+#modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#modal.open{  /*lệnh để khi click vào button Buy Tickets thì hiện modal màu xanh lên màn hình */
+    display : flex;
+}
+
+#modal #modal-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    max-width: calc(100%-32px); /* responsive cho modal */
+    position: relative;
+    animation : modal_appear 0.5s ease;
+}
+@keyframes modal_appear {
+    from{
+        opacity : 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+#modal .modal-close{
+    position: absolute;
+    top : 0;
+    right : 0;
+    padding : 16px;
+    cursor: pointer;
+}
+#modal .modal-close:hover{
+    color:red;
+}
+#modal .modal-header {
+    background-color: #009688;
+    color : #fff;
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size : 30px;
+    font-family: sans-serif;
+}
+.modal-header .fa-bag-shopping{
+    margin-right: 16px;
+}
+
+#modal .modal-body{
+    padding : 0.15px 16px;
+
+}
+.modal-body .modal-label{
+      display: block;
+      margin : 15px 0;
+}
+.modal-body .modal-input{
+    display: block;
+    padding : 8px;
+    width: 100%;
+}
+
+.modal-body .modal-pay{
+    margin: 16px 0;
+    padding : 16px;
+    border: none;
+    background-color: #009688;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+}
+.modal-body .modal-pay:hover{
+    opacity : 0.75;
+}
+
+#modal-footer {
+    padding : 16px;
+    text-align: right;
+}
+.modal-help{
+    font-size: 15px;
+    font-family: sans-serif;
+    color : #000000;  
+}
+
